@@ -6,14 +6,14 @@ require_once 'vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
-$sid    = "AC5a8d1323cf260a724a22087e86c15852";
-$token  = "2a1bc8492c39afacd5813e77761adefb";
+$sid    = "##";//Put your own credentials
+$token  = "##";
 $twilio = new Client($sid, $token);
 
 $message = $twilio->messages
-    ->create("+19173490168", // to
+    ->create("+11234567890", // to
         array(
-            "from" => "+19733632201",
+            "from" => "+19876543210", //from
             "body" => "Hello from Rohan Raygade CS 643 Fall 2018"
         )
     );
